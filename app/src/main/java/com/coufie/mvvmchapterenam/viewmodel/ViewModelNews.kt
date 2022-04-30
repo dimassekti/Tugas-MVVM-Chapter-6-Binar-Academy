@@ -2,9 +2,8 @@ package com.coufie.mvvmchapterenam.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.coufie.mvvmchapterenam.model.getAllNews
 import com.coufie.mvvmchapterenam.model.getAllNewsItem
-import com.coufie.mvvmchapterenam.network.ApiClient
+import com.coufie.mvvmchapterenam.network.NewsApi
 import retrofit2.Call
 import retrofit2.Response
 
@@ -21,7 +20,7 @@ class ViewModelNews : ViewModel() {
     }
 
     fun getDataNews(){
-        ApiClient.instance.getAllNews()
+        NewsApi.instance.getAllNews()
             .enqueue(object : retrofit2.Callback<List<getAllNewsItem>>{
                 override fun onResponse(
                     call: Call<List<getAllNewsItem>>,

@@ -1,5 +1,6 @@
 package com.coufie.mvvmchapterenam.network
 
+import com.coufie.mvvmchapterenam.model.getAllCountryItem
 import com.coufie.mvvmchapterenam.model.getAllNewsItem
 import com.coufie.mvvmchapterenam.model.getAllStaffItem
 import retrofit2.Call
@@ -11,4 +12,7 @@ interface ApiService {
 
     @GET("staf")
     fun getAllStaf() : Call<List<getAllStaffItem>>
+
+    @GET("all")
+    fun getAllCountry() : Call<List<getAllCountryItem>>
 }

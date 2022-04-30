@@ -1,4 +1,4 @@
-package com.coufie.mvvmchapterenam.view
+package com.coufie.mvvmchapterenam.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View

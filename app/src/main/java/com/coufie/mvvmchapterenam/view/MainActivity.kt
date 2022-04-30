@@ -1,5 +1,6 @@
 package com.coufie.mvvmchapterenam.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
@@ -11,30 +12,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var newsAdapter : NewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        newsAdapter = NewsAdapter()
+        btn_news.setOnClickListener {
+            startActivity(Intent(this, NewsActivity::class.java))
+        }
 
-        rv_news.layoutManager = LinearLayoutManager(this)
-        rv_news.adapter = newsAdapter
-        initViewModel()
+        btn_country.setOnClickListener {
+            startActivity(Intent(this, CountryActivity::class.java))
+        }
+
+
     }
 
-    fun initViewModel(){
-        val viewModel = ViewModelProvider(this).get(ViewModelNews::class.java)
-        viewModel.getLiveDataNewss().observe(this, Observer {
-            if(it != null){
-                newsAdapter.setNewsList(it)
-                newsAdapter.notifyDataSetChanged()
-            }else{
 
-            }
-
-        })
-        viewModel.getDataNews()
-    }
 }

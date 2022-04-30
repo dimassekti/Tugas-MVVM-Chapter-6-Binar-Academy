@@ -6,9 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_news"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+       <Button
+           android:id="@+id/btn_news"
+           android:text="news"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <Button
+           android:id="@+id/btn_country"
+           android:text="country"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+   </LinearLayout>
 
 </RelativeLayout>

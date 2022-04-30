@@ -5,9 +5,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object ApiClient {
+object CountryApi {
 
-    const val BASE_URL = "https://6254434289f28cf72b5aed04.mockapi.io/"
+//    const val BASE_URL = "https://6254434289f28cf72b5aed04.mockapi.io/"
+    const val BASE_URL = "https://restcountries.com/v2/"
+
 
     private  val logging : HttpLoggingInterceptor
         get(){
